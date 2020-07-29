@@ -17,4 +17,10 @@ class ExampleUnitTest {
         assertEquals("questionablecharacters".checkPalindrome(), false)
     }
 
+    @Test
+    fun removeSpecialCharacters(){
+        assertEquals(true, "abba-abba-abba-abba".checkPalindrome())
+        assertEquals(false, "adekunle\'elnukedah".checkPalindrome())
+        assertEquals(true, "madam\nmadam".checkPalindrome())
+    }
 }
